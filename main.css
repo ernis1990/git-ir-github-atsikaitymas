@@ -1,12 +1,14 @@
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
 body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     background-image: url(./img/bg.jpg), url(./img/bg-overlay.png);
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 220%;
-    
     padding: 10px;
 }
 
@@ -33,13 +35,37 @@ header{
     color: white;
     border-bottom: 2px white solid;
 
+
     p{
         line-height: 25px;
     }
     a{
         text-decoration: none;
-        border-bottom: 1px white dotted;
+        border-bottom: 2px white dotted;
 
         color: white;
     }
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+
+    button{
+        background-color: transparent;
+        border: 1px white solid;
+        color: white;
+        padding: 10px;
+    }
+
+    button:hover{
+        background-color: rgba(255, 255, 255, 0.224);
+    }
+}
+
+hr{
+    border: white solid 1px;
+    width: 38px;
+    
+    rotate: 90deg;
 }
