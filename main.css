@@ -1,0 +1,25 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+body{
+    background-image: url(./img/bg.jpg), url(./img/bg-overlay.png);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 220%;
+    padding: 10px;
+}
+
+header{
+    height: 32vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-bottom: 2px solid white;
+    img{
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 30px;
+        padding: 30px;
+        margin: 30px;
+    }
+}
