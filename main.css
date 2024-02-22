@@ -1,15 +1,20 @@
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
 body{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-image: url(./img/bg.jpg), url(./img/bg-overlay.png);
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 220%;
+    background-size: cover;
+    background-image: url(./img/bg.jpg);
+}
+
+body > div{
+    background-image: url(./img/bg-overlay.png);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 10px;
+    
 }
 
 header{
@@ -40,10 +45,12 @@ header{
         line-height: 25px;
     }
     a{
-        text-decoration: none;
-        border-bottom: 2px white dotted;
-
+        text-decoration: underline dotted;
+        /* border-bottom: 2px white dotted; */
         color: white;
+    }
+    a:hover{
+        color: rgb(123, 123, 149);
     }
 }
 
@@ -66,6 +73,67 @@ header{
 hr{
     border: white solid 1px;
     width: 38px;
-    
     rotate: 90deg;
 }
+
+
+#introHead, #workHead, #aboutHead, #contactHead{
+    display: flex;
+    justify-content: space-between;
+
+    svg{
+        width: 25px;
+        transition: transform .7s ease-in-out;
+    }
+    svg:hover{
+        transform: rotate(90deg);
+    }
+
+    
+
+}
+
+.tab1, .tab2, .tab3, .tab4{
+    
+    background-color: rgba(0, 0, 0, 0.787);
+    padding: 10px 30px;
+    width: 350px;
+
+    h2{
+        text-decoration-line: underline;
+        color: white;
+    }
+
+    p{
+        color: white;
+    }
+
+    #introVideo{
+        text-align: center;
+    }
+
+    img{
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+.tab1::backdrop, .tab2::backdrop, .tab3::backdrop, .tab4::backdrop{
+    background-image: url(./img/bg.jpg);
+}
+
+@media(min-width:700px){
+    #buttons{
+        
+        flex-direction: row;
+        justify-content: center;
+
+        button{
+            width: 100px;
+        }
+    }
+}
+
